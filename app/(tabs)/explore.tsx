@@ -37,6 +37,17 @@ export default function TabTwoScreen() {
         <Button title="Play Sound" onPress={() => player.play()} />
         <ThemedText type="subtitle">Step 2: Tap `Play Sound` again</ThemedText>
         <ThemedText type="subtitle">Step 3: Observe it does _not_ play again ❌</ThemedText>
+        <ThemedText type="subtitle">
+          Step 4: Tap `Play w/ Seek` to reset the position and hear the sound
+        </ThemedText>
+        ` for it to work
+        <Button
+          title="Play w/ Seek"
+          onPress={() => {
+            player.seekTo(0);
+            player.play();
+          }}
+        />
       </ThemedView>
     </ParallaxScrollView>
   );
